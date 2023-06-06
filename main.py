@@ -1,10 +1,14 @@
+import asyncio
+
+import src.hotkey_handler as hotkey_handler
+
 class main():
     def __init__(self):
         pass
 
-    def run(self):
-        pass
+    async def run(self):
+        hotkey_handler.load()
 
 if __name__ == '__main__':
     main = main()
-    main.run()
+    asyncio.run(main.run())
