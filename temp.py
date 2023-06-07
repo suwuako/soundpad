@@ -1,12 +1,18 @@
 import keyboard
 import winsound
+import asyncio
 
-def play(path):
-    winsound.PlaySound(path, winsound.SND_ALIAS)
+async def play(path):
+    print(1)
+    await winsound.PlaySound(path, winsound.SND_ALIAS)
+    print(2)
 
-keyboard.add_hotkey("q", lambda: play('data/basic.wav'))
-keyboard.add_hotkey("w", lambda: play('data/flam.wav'))
+task1 = play('data/dog.wav')
+task2 = play('data/basic.wav')
 
+tasks = [task1, task2]
 
-while True:
-    v=0
+async def main():
+    await asyncio.gather(*tasks)
+
+asyncio.run(main())
