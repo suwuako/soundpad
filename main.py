@@ -11,8 +11,13 @@ class main():
         hotkey_handler.load()
 
         listener1 = asyncio.create_task(hotkey_handler.listener(1))
+        listener2 = asyncio.create_task(hotkey_handler.listener(2))
+        listener3 = asyncio.create_task(hotkey_handler.listener(3))
+        listener4 = asyncio.create_task(hotkey_handler.listener(4))
+        listener5 = asyncio.create_task(hotkey_handler.listener(5))
 
-        tasks = [listener1]
+        tasks = [listener1, listener2, listener3, listener4, listener5]
+
         await asyncio.gather(*tasks)
 
 if __name__ == '__main__':

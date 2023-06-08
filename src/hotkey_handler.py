@@ -5,11 +5,9 @@ import asyncio
 
 from src import playsound
 from src import read_json
-<<<<<<< HEAD
+
 from src import sound_handler
-=======
 from src import os_pipe
->>>>>>> 519ae54296a4de2c3d609d0e47986d08333f64ba
 
 # def listener(key):
 #     print("pass")
@@ -26,14 +24,10 @@ async def listener(thread):
         key_list.append(key)
         path_list.append(path)
         if keyboard.is_pressed(key):
-<<<<<<< HEAD
-            await sound_handler.play(path)
-=======
             # needs to pipe arguments into os_pipe which runs a separate subprocess because playing audio pauses python
             # until audio is done playing
             os_pipe.play(path)
     return
->>>>>>> 519ae54296a4de2c3d609d0e47986d08333f64ba
 
 
 

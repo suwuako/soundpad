@@ -1,5 +1,16 @@
-import os
+import asyncio
 
-localpath = os.path.abspath(os.getcwd())
-print(localpath)
-os.system(f"{localpath}/temp4.py 123")
+async def k(e):
+    return e
+
+
+
+async def main():
+    task = k(1)
+    task2 = k(2)
+
+    asyncio.gather(task, task2)
+
+    print(task, task2)
+
+asyncio.run(main())
