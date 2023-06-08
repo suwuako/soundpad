@@ -5,6 +5,7 @@ import asyncio
 
 from src import playsound
 from src import read_json
+from src import sound_handler
 
 # def listener(key):
 #     print("pass")
@@ -21,9 +22,7 @@ async def listener(thread):
         key_list.append(key)
         path_list.append(path)
         if keyboard.is_pressed(key):
-            localpath = os.path.abspath(os.getcwd())
-            print(localpath)
-            os.system(f"{localpath}/src/playsound.py {path}")
+            await sound_handler.play(path)
 
 
 
