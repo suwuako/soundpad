@@ -8,13 +8,14 @@ from src import os_pipe
 #     print("pass")
 #     pass
 
-async def listener(thread):
+async def listener(thread, keymap_path):
     """
     :param thread: variable used for asyncronous programming and debugging
     :return: None
     """
     # Reads keymap data from keymap json file
-    keymap = read_json.read('data/keymap.json')
+    keymap = read_json.read(keymap_path)
+
     #print(f'Listener running on thread {thread}') (THIS WAS A STUB)
 
     key_list = list()
@@ -28,6 +29,8 @@ async def listener(thread):
             # needs to pipe arguments into os_pipe which runs a separate subprocess because playing audio pauses python
             # until audio is done playing
             os_pipe.play(path)
+
+    return
 
 # old depreciated function to handle keymaps
 """

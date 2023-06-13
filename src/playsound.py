@@ -15,10 +15,10 @@ def play(path):
     abs_path = os.path.abspath(os.getcwd())
 
     # Access path loads all current playing sounds
-    access_path = f"{abs_path}\data\in_use.json"
+    access_path = f"{abs_path}\data\in_use\in_use.json"
 
     in_use = read_json.read(access_path)
-    print(f"Playing {path}...")
+
     if path not in in_use:
         # writes sound to be played into file to prevent keyboard presses causing multiple inputs
         in_use.append(path)

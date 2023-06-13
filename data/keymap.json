@@ -1,5 +1,5 @@
 {
-  "q": "data/basic.wav",
-  "w": "data/flam.wav",
-  "e": "data/dog.wav"
+  "q": "sounds/basic.wav",
+  "w": "sounds/flam.wav",
+  "e": "sounds/dog.wav"
 }
