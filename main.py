@@ -26,10 +26,18 @@ if __name__ == '__main__':
     main = main()
     DELAY = 0.1
 
-    main_tui.run()
+    val = main_tui.run()
 
-    while True:
-        asyncio.run(main.run())
-        time.sleep(DELAY)
+    match val:
+        case 1:
+            pass
+        case 2:
+            pass
+        case 3:
+            pass
+        case 4:
+            while True:
+                asyncio.run(main.run())
+                time.sleep(DELAY)
 
 
