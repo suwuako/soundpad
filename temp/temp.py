@@ -7,8 +7,8 @@ async def play(path):
     await winsound.PlaySound(path, winsound.SND_ALIAS)
     print(2)
 
-task1 = play('sounds/dog.wav')
-task2 = play('sounds/basic.wav')
+task1 = play('../sounds/dog.wav')
+task2 = play('../sounds/basic.wav')
 
 tasks = [task1, task2]
 
