@@ -2,6 +2,7 @@ import asyncio
 import time
 
 import src.hotkey_handler as hotkey_handler
+import src.tui.main_tui as main_tui
 
 class main():
     def __init__(self):
@@ -24,6 +25,8 @@ class main():
 if __name__ == '__main__':
     main = main()
     DELAY = 0.1
+
+    main_tui.run()
 
     while True:
         asyncio.run(main.run())
