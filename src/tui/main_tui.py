@@ -4,13 +4,14 @@ def run():
     """
     print_val = """
 What do you want to do?
-1) edit layout
+1) create new layout
 2) print current layout
 3) load layout
 4) start soundpad
 5) list layouts
+6) edit layouts
 
-Enter number (1-4) to select option to run: 
+Enter number (1-6) to select option to run: 
 """
 
     # Check if input is valid
@@ -23,7 +24,7 @@ Enter number (1-4) to select option to run:
         except:
             print("You need to enter a whole number.")
 
-        if val < 6 and val > 0:
+        if val < 7 and val > 0:
             return val
 
 if __name__ == "__main__":

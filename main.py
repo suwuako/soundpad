@@ -9,6 +9,7 @@ import src.tui.read_keymap as read_keymap
 import src.tui.load_keymap as load_keymap
 import src.tui.list_keymaps as list_keymaps
 import src.tui.write_keymap as write_keymap
+import src.tui.edit_keymap as edit_keymap
 
 class main():
     def __init__(self):
@@ -49,3 +50,6 @@ if __name__ == '__main__':
                     time.sleep(DELAY)
             case 5:
                 list_keymaps.run()
+            case 6:
+                edit_keymap.run()
+

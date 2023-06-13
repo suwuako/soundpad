@@ -12,6 +12,7 @@ def run():
 
         if os.path.exists(true_path):
             print(f"Loading {keymap_path} at {true_path}")
+            input("Press enter to continue")
             return f"data/{keymap_path}.json"
         else:
             print("Invalid input... Try again.")

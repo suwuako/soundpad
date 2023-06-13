@@ -1,1 +1,1 @@
-pip install keyboard, winsound, asyncio, pathlib
+pip install keyboard asyncio pathlib

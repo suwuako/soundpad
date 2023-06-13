@@ -4,6 +4,10 @@ import src.write_json as write_json
 
 
 def run():
+    """
+    creates a new keymap based on layout name
+    :return: None
+    """
     keymap = {}
 
     while True:
@@ -17,11 +21,12 @@ def run():
             break
 
     while True:
-        key = input("Enter a key that will be bound to a sound (Press ENTER when you are done)")
+        key = input("Enter a key that will be bound to a sound (Press ENTER when you are done): ")
 
         if key == '':
-            write_json.write(f"data\{keymap_path}.json3", keymap)
+            write_json.write(f"data\{keymap_path}.json", keymap)
             print("Done!")
+            input("Press enter to continue")
             return
 
         sound_path = input("Enter the path to where the sound file will be located (Has to be a .wav file and is reccomended"
