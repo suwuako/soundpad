@@ -22,7 +22,7 @@ Enter number (1-4) to select option to run:
         except:
             print("You need to enter a whole number.")
 
-        if val <= 4 and 1 >= val:
+        if val < 5 and val > 0:
             return val
 
 if __name__ == "__main__":
