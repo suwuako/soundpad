@@ -1,3 +1,6 @@
-import sys
+import src.write_json as write_json
 
-print(sys.argv)
+content = {"a" : "b"}
+
+write_json.write("data/in_use.json", content)
+
