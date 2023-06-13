@@ -8,6 +8,7 @@ import src.tui.main_tui as main_tui
 import src.tui.read_keymap as read_keymap
 import src.tui.load_keymap as load_keymap
 import src.tui.list_keymaps as list_keymaps
+import src.tui.write_keymap as write_keymap
 
 class main():
     def __init__(self):
@@ -35,7 +36,7 @@ if __name__ == '__main__':
 
         match val:
             case 1:
-                pass
+                write_keymap.run()
             case 2:
                 read_keymap.run(default_keymap)
             case 3:
