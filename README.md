@@ -1,8 +1,8 @@
 # soundpad
 
 ## Setup
-1. run setup.bat to install prerequisite files
-2. run main.py start
+1. run setup.bat to install prerequisite libraries (setup.sh for unix systems)
+2. run main.py to start
 
 ## TODO
 - colors
