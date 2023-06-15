@@ -15,4 +15,5 @@ def play(path):
     # opens a new process separate from current running process and automatically closes itself after playing sound
     # localpath represents file executable to playsound.py and sys.executable runs it as a python file
     subprocess.Popen([sys.executable, localpath, path], stderr=subprocess.PIPE)
-    print(path)
+    print(f"Playing sound file at: {path}\n",
+            "Press Control+C to stop the soundpad")
