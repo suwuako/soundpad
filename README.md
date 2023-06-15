@@ -10,8 +10,11 @@ due to library limitations only .wav files can be used
 
 ## File Structure
 /data/ holds keymaps in json format
+
 /src/ holds library files 
+
 /sounds/ is the reccomended place to store audio files in .wav format
+
 /data/in_use/ is a storage folder to handle asynchronous audio playing
 
 ## Contributors
