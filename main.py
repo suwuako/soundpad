@@ -21,11 +21,13 @@ class main():
         # listener3 = asyncio.create_task(hotkey_handler.listener(3))
         # listener4 = asyncio.create_task(hotkey_handler.listener(4))
         # listener5 = asyncio.create_task(hotkey_handler.listener(5))
+        # DRIVER_LISTENER = asyncio.create_task(hotkey_handler.listener(6, "data/keymap.json")
 
         # tasks = [listener1, listener2, listener3, listener4, listener5]
         tasks = [listener1]
 
         await asyncio.gather(*tasks)
+        # await asyncio.gather(listener1, listener2)
 
 if __name__ == '__main__':
     main = main()

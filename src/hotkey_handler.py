@@ -16,6 +16,8 @@ async def listener(thread, keymap_path):
     # Reads keymap data from keymap json file
     keymap = read_json.read(keymap_path)
 
+    # Old driver function that mapped to keymap
+
     #print(f'Listener running on thread {thread}') (THIS WAS A STUB)
 
     key_list = list()
@@ -32,7 +34,7 @@ async def listener(thread, keymap_path):
 
     return
 
-# old depreciated function to handle keymaps
+# old driver function to handle keymaps
 """
 def load():
     keymap = read_json.read('data/keymap.json')
@@ -45,4 +47,5 @@ def load():
         print("doneq")
 
     print("complete")
+    return keymap
 """

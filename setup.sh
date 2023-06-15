@@ -1,1 +1,1 @@
-pip install keyboard asyncio pathlib
+pip install keyboard asyncio pathlib colorama
