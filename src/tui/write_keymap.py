@@ -2,12 +2,15 @@ import os
 
 import src.write_json as write_json
 
+from colorama import Fore, Back, Style, init
+
 
 def run():
     """
     creates a new keymap based on layout name
     :return: None
     """
+    init(autoreset=True)
     keymap = {}
 
     while True:
@@ -15,7 +18,7 @@ def run():
         true_path = f"{os.path.abspath(os.getcwd())}\data\{keymap_path}.json"
 
         if os.path.exists(true_path):
-            print(f"Layout already exists!")
+            print(f"{Fore.RED} Layout already exists!")
 
         else:
             break
@@ -25,7 +28,7 @@ def run():
 
         if key == '':
             write_json.write(f"data\{keymap_path}.json", keymap)
-            print("Done!")
+            print(f"{Fore.GREEN} Done!")
             input("Press enter to continue")
             return
 

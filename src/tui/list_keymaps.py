@@ -1,10 +1,12 @@
 from os import walk
+from colorama import Fore, Back, Style, init
 
 def run():
     """
     lists keymaps in /data/
     :return: None
     """
+    init(autoreset=True)
     files = []
     filenames = []
 
@@ -15,7 +17,7 @@ def run():
     for i in files:
         # Delete the .json file extension
         filename = i[:-5]
-        print(filename)
+        print(f"{Fore.GREEN} {filename}")
 
     input("Press enter to continue: ")
     return

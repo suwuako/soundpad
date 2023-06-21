@@ -1,7 +1,12 @@
+from colorama import Fore, Back, Style, init
+
+
 def run():
     """
     :returns: status code for menu choices
     """
+    init(autoreset=True)
+
     print_val = """
 What do you want to do?
 1) create new layout
@@ -22,7 +27,7 @@ Enter number (1-6) to select option to run:
         try:
             val = int(val)
         except:
-            print("You need to enter a whole number.")
+            print(f"{Fore.RED} You need to enter a whole number.")
 
         if val < 7 and val > 0:
             return val

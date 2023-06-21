@@ -5,11 +5,14 @@ import src.write_json as write_json
 
 import src.tui.read_keymap as read_keymap
 
+from colorama import Fore, Back, Style, init
+
 def run():
     """
     edits a keymap
     :return: None
     """
+    init(autoreset=True)
     while True:
         keymap_path = input("Type in the name of your layout: ")
         true_path = f"{os.path.abspath(os.getcwd())}\data\{keymap_path}.json"
@@ -19,7 +22,7 @@ def run():
             break
 
         else:
-            print("Keymap does not exist!")
+            print(f"{Fore.RED} Keymap does not exist!")
 
     keymap = read_json.read(true_path)
 
@@ -30,7 +33,7 @@ def run():
 
         if edit_key == '':
             write_json.write(f"data\{keymap_path}.json", keymap)
-            print("Done!")
+            print(f"{Fore.GREEN} Done!")
             input("Press enter to continue")
             return None
 
