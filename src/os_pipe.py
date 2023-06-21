@@ -2,7 +2,7 @@ import os
 import subprocess
 import sys
 
-from colorama import Fore, init
+from colorama import Fore, Back, Style, init
 
 def play(path):
     """

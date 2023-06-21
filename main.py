@@ -11,6 +11,9 @@ import src.tui.list_keymaps as list_keymaps
 import src.tui.write_keymap as write_keymap
 import src.tui.edit_keymap as edit_keymap
 
+from colorama import Fore
+
+
 class main():
     def __init__(self):
         pass
