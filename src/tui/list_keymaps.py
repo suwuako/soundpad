@@ -17,9 +17,9 @@ def run():
     for i in files:
         # Delete the .json file extension
         filename = i[:-5]
-        print(f"{Fore.GREEN} {filename}")
+        print(f"{filename}")
 
-    input("Press enter to continue: ")
+    input(f"{Fore.GREEN} Press enter to continue: ")
     return
 
 

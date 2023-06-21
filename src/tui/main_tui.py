@@ -7,7 +7,7 @@ def run():
     """
     init(autoreset=True)
 
-    print_val = """
+    print_val = f"""{Fore.WHITE}
 What do you want to do?
 1) create new layout
 2) print current layout
