@@ -45,7 +45,7 @@ if __name__ == '__main__':
             case 3:
                 default_keymap = load_keymap.run()
             case 4:
-                print("Soundpad started! Press and hold Control+C to stop the soundpad")
+                print(f"{Fore.GREEN} Soundpad started! Press and hold Control+C to stop the soundpad")
 
                 while True:
                     asyncio.run(main.run(default_keymap))
